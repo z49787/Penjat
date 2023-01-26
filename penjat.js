@@ -58,23 +58,23 @@ case "ü":
 
                     alert( y + ' ' + "vidas")
                 
-                }
-                 function cargar(){      
-        document.getElementById("ahorcado_1").hidden = true;
-        document.getElementById("ahorcado_2").hidden = true;
-        document.getElementById("ahorcado_3").hidden = true;
-        document.getElementById("ahorcado_4").hidden = true;
-        document.getElementById("ahorcado_5").hidden = true;
-        document.getElementById("ahorcado_6").hidden = true;
-        document.getElementById("ahorcado").hidden = true;
-        }
-             lletra = lletra.toLowerCase();
-              }
-              
-              /*function orca (){
-                  switch (vidas)
+                  switch ("x"){
               case 6:
-              }
+                    document.getElementById("ahorcado_1").hidden = false;
+              break;}
+               }     
+           }
+            
+        function cargar(){      
+            document.getElementById("ahorcado_1").hidden = true;
+            document.getElementById("ahorcado_2").hidden = true;
+            document.getElementById("ahorcado_3").hidden = true;
+            document.getElementById("ahorcado_4").hidden = true;
+            document.getElementById("ahorcado_5").hidden = true;
+            document.getElementById("ahorcado_6").hidden = true;
+            document.getElementById("ahorcado_0").hidden = true;
+        }
+
               
               
     /*function parar()
