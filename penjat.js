@@ -53,17 +53,31 @@ case "ü":
                     //document.getElementById("letras").innerHTML + ' ' + lletra;
                     document.getElementById("resultat").innerHTML = "Has fallado";
                     alert("no");
-                    x = x -1
+                    x = x - 1;
                     document.getElementById("x").innerHTML = x;
 
-                    alert( y + ' ' + "vidas")
-                
-                  switch ("x"){
+                    alert(x + ' ' + "vidas");
+                  
+               }     
+            if (x == 6){document.getElementById("ahorcado_0").hidden = false;}
+            
+            if (x == 5){document.getElementById("ahorcado_1").hidden = false;
+                           document.getElementById("ahorcado_0").hidden = true;}
+            if (x == 4){document.getElementById("ahorcado_2").hidden = false;
+                          document.getElementById("ahorcado_1").hidden = true;}
+            if (x == 3){document.getElementById("ahorcado_3").hidden = false;
+                            document.getElementById("ahorcado_2").hidden = true;}
+            if (x == 2){document.getElementById("ahorcado_4").hidden = false;
+                            document.getElementById("ahorcado_3").hidden = true;}
+            if (x == 1){document.getElementById("ahorcado_5").hidden = false;
+                            document.getElementById("ahorcado_4").hidden = true;}
+            if (x == 0){document.getElementById("ahorcado_6").hidden = false;
+                          document.getElementById("ahorcado_5").hidden = true;}
+/*              switch ("x"){
               case 6:
                     document.getElementById("ahorcado_1").hidden = false;
-              break;}
-               }     
-           }
+              break;}*/
+    }
             
         function cargar(){      
             document.getElementById("ahorcado_1").hidden = true;
