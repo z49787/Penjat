@@ -59,25 +59,46 @@ case "ü":
                     alert(x + ' ' + "vidas");
                   
                }     
-            if (x == 6){document.getElementById("ahorcado_0").hidden = false;}
-            
+            if (x == 6){document.getElementById("ahorcado_0").hidden = false;
+                document.getElementById('bell_toll').play()
+            }
             if (x == 5){document.getElementById("ahorcado_1").hidden = false;
-                           document.getElementById("ahorcado_0").hidden = true;}
+                           document.getElementById("ahorcado_0").hidden = true;
+                document.getElementById('bell_toll').play()
+            }
             if (x == 4){document.getElementById("ahorcado_2").hidden = false;
-                          document.getElementById("ahorcado_1").hidden = true;}
+                          document.getElementById("ahorcado_1").hidden = true;
+                document.getElementById('bell_toll').play()
+            }
             if (x == 3){document.getElementById("ahorcado_3").hidden = false;
-                            document.getElementById("ahorcado_2").hidden = true;}
+                            document.getElementById("ahorcado_2").hidden = true;
+                document.getElementById('bell_toll_x3').play()
+            }
             if (x == 2){document.getElementById("ahorcado_4").hidden = false;
-                            document.getElementById("ahorcado_3").hidden = true;}
+                            document.getElementById("ahorcado_3").hidden = true;
+                document.getElementById('bell_toll').play()
+            }
             if (x == 1){document.getElementById("ahorcado_5").hidden = false;
-                            document.getElementById("ahorcado_4").hidden = true;}
+                            document.getElementById("ahorcado_4").hidden = true;
+                document.getElementById('bell_toll').play()
+            }
             if (x == 0){document.getElementById("ahorcado_6").hidden = false;
-                          document.getElementById("ahorcado_5").hidden = true;}
-/*              switch ("x"){
-              case 6:
-                    document.getElementById("ahorcado_1").hidden = false;
-              break;}*/
+                          document.getElementById("ahorcado_5").hidden = true;
+                document.getElementById('bell_toll').play()
+            }
+                
     }
+    
+    /*function audio(){ 
+        switch (x){
+                case 6:
+                    document.getElementById('bell_toll').play()
+                break;
+                case 3,2,1:
+                    document.getElementById('bell_toll_x3').play()
+                break;
+      }
+    }*/
             
         function cargar(){      
             document.getElementById("ahorcado_1").hidden = true;
@@ -88,7 +109,7 @@ case "ü":
             document.getElementById("ahorcado_6").hidden = true;
             document.getElementById("ahorcado_0").hidden = true;
         }
-
+        
               
               
     /*function parar()
