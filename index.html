@@ -24,8 +24,18 @@ and open the template in the editor.
     <h1> Prototip Joc del Penjat</h1>        
         <div id = "resultat">Lletra</div>
 
-       <input type="text" id="lletra" placeholder="Escriu una lletra minúscula">
+       <input type="text" id="lletra" placeholder="Escriu una lletra minúscula"
+              style="
+              padding: 0,375rem 0,75rem;
+              border: none;
+              outline: none;
+              background: no-repeat;
+              border-bottom: 2px solid #ccc;
+              border-radius: 0;
+              box-shadow:none; ">
+       <div id="boton">
        <button id=1 onclick="Validar()" >Comprueba</button>
+        </div>
 
                     <h2>LLetres</h2> 
                         <div id = "paraula">_ _ _ _ _</div>
@@ -54,7 +64,11 @@ and open the template in the editor.
              />
         <img src="img/ahorcado_6.png" id="ahorcado_6" width="300" height="295"
              />
-        <img src="img/Castle2.png" id="castillo"/>
+        <img src="img/Castle2.png" id="castillo"
+             />
+        <img src="img/descarga.jpg" id="gameover"
+             />
+        
                     </div>
         <div>
         <audio id="bell_toll"> <source src="aud/bell_toll.mp3" type="audio/mpeg">

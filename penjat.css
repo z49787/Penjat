@@ -23,3 +23,13 @@ html{
         #fotos {
             position:relative; top:-330px; left: 120px;
         }
+    #boton {
+  background-color: #4CAF50;
+  border: 2px solid #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

@@ -43,14 +43,13 @@ case "ü":
             paraula= paraula + lletra +" "
             document.getElementById("paraula").innerHTML = paraula;
 
-                 if (lletra >= "m")
+                 if (((lletra <= "m") && (lletra >= "a")) || (lletra == "ç"))
                 {
                     document.getElementById("resultat").innerHTML = "Has acertado";
                     alert("si");
                 }
                  else 
                 {
-                    //document.getElementById("letras").innerHTML + ' ' + lletra;
                     document.getElementById("resultat").innerHTML = "Has fallado";
                     alert("no");
                     x = x - 1;
@@ -60,37 +59,37 @@ case "ü":
                   
                }
                
-            if (x <= 7){document.getElementById('bell_toll').play()
-            }
+            //if (x <= 7){document.getElementById('bell_toll').play()}
             if (x == 6){document.getElementById("ahorcado_0").hidden = false;
-                //document.getElementById('bell_toll').play()
+                document.getElementById('bell_toll').play()
             }
             if (x == 5){document.getElementById("ahorcado_1").hidden = false;
                            document.getElementById("ahorcado_0").hidden = true;
-                //document.getElementById('bell_toll').play()
+                document.getElementById('bell_toll').play()
             }
             if (x == 4){document.getElementById("ahorcado_2").hidden = false;
                           document.getElementById("ahorcado_1").hidden = true;
-                //document.getElementById('bell_toll').play()
+                document.getElementById('bell_toll').play()
             }
             if (x == 3){document.getElementById("ahorcado_3").hidden = false;
                             document.getElementById("ahorcado_2").hidden = true;
-                //document.getElementById('bell_toll_x3').play()
+                document.getElementById('bell_toll_x3').play()
             }
             if (x == 2){document.getElementById("ahorcado_4").hidden = false;
                             document.getElementById("ahorcado_3").hidden = true;
-                //document.getElementById('bell_toll').play()
+                document.getElementById('bell_toll').play()
             }
             if (x == 1){document.getElementById("ahorcado_5").hidden = false;
                             document.getElementById("ahorcado_4").hidden = true;
-                //document.getElementById('bell_toll').play()
+                document.getElementById('bell_toll').play()
             }
             if (x == 0){document.getElementById("ahorcado_6").hidden = false;
                           document.getElementById("ahorcado_5").hidden = true;
-                //document.getElementById('cat-fight').play()
+                document.getElementById('cat-fight').play()
                 document.body.style.backgroundImage = "url('img/Castle2.png')";
         document.getElementById("1").disabled = true;
         document.getElementById("lletra").disabled = true;
+                
             }
                 
     }
@@ -115,4 +114,5 @@ case "ü":
             document.getElementById("ahorcado_6").hidden = true;
             document.getElementById("ahorcado_0").hidden = true;
             document.getElementById("castillo").hidden = true;
+            document.getElementById("gameover").hidden = true;
         }
