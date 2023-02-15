@@ -10,6 +10,8 @@
     function Validar(){
 
             var lletra = document.getElementById("lletra").value;
+            document.getElementById("lletra").value = '';
+            
 
         lletra = lletra.toLowerCase();
         switch(lletra) {
@@ -43,20 +45,24 @@ case "ü":
             paraula= paraula + lletra +" "
             document.getElementById("paraula").innerHTML = paraula;
 
-                 if (((lletra <= "m") && (lletra >= "a")) || (lletra == "ç"))
+                 if (((lletra <= "m") && (lletra >= "a")) || (lletra == "ç") ||
+                    (lletra == "·"))
                 {
                     document.getElementById("resultat").innerHTML = "Has acertado";
-                    alert("si");
+                    //alert("si");
                 }
-                 else 
+                 else if (((lletra >= "n") && (lletra <= "z")) || (lletra == "ñ")
+                         || (lletra == "·"))
                 {
                     document.getElementById("resultat").innerHTML = "Has fallado";
-                    alert("no");
+                    //alert("no");
                     x = x - 1;
                     document.getElementById("x").innerHTML = x;
 
-                    alert(x + ' ' + "vidas");
+                    //alert(x + ' ' + "vidas");
                   
+               } else {
+                   alert("Caracter incorrecte");
                }
                
             //if (x <= 7){document.getElementById('bell_toll').play()}

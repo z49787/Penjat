@@ -18,8 +18,16 @@ and open the template in the editor.
           style="background-image: url('img/depositphotos_119932308-stock-illustration-desert-landscape-with-cactuses-and.jpg');
           background-size: 640px 480px; background-repeat: no-repeat">
         
-       
+       <script>
+		var seconds = 0;
+		function timer() {
+			seconds = seconds + 1;
+			document.getElementById("counter").innerHTML = seconds;
+		}
+		setInterval(timer, 1000);
+	</script>
         
+        <div id="counter" style=" color: blue"></div>
         
     <h1> Prototip Joc del Penjat</h1>        
         <div id = "resultat">Lletra</div>
@@ -88,6 +96,12 @@ and open the template in the editor.
         </audio>
         </div>
         
+                    <div id="idiomas">
+        <a href="https://penjat-netlify-app.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=es&_x_tr_pto=wapp">           
+        <img src="img/gb.png" alt="tra_es" title="en Ingles"/>
+        </a>
+    </div>
+                    
     <a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El Joc del Penjat</a>
 
     </body>

@@ -23,7 +23,14 @@ html{
         #fotos {
             position:relative; top:-330px; left: 120px;
         }
-    #boton {
+        #counter {
+            background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+            border: 1px solid black;
+            padding: 1px 2px;
+            border-radius: 8px;
+            margin: auto;
+        }
+    /*#boton {
   background-color: #4CAF50;
   border: 2px solid #4CAF50;
   color: white;
@@ -32,4 +39,4 @@ html{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-}
+}*/
