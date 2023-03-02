@@ -13,14 +13,9 @@
     var adivinadas = [];
         
             for (var i =0; i < parabla1.length; i++) { 
-                adivinadas[i] = "_";
-                    
+                adivinadas[i] = "_";      
             }
-            alert(parabla1);
-            alert(adivinadas);
-document.getElementById("letras").innerHTML = adivinadas;
-document.getElementById("letras").innerHTML = "_ _ _ _ _ _ _ _ _ _";
-
+            
     function Validar(){
 
             var lletra = document.getElementById("lletra").value;
@@ -61,12 +56,13 @@ document.getElementById("letras").innerHTML = "_ _ _ _ _ _ _ _ _ _";
 
         var pos = parabla1.indexOf(lletra);
 
-             if (pos < -1)
+             if (pos > -1)
             {
                 document.getElementById("resultat").innerHTML = "Has acertado";
-                //alert("si");
+                alert("si");
+                adivinadas[pos] = "";
             }
-             else if (pos > -1)
+             else if (pos == -1)
             {
                 document.getElementById("resultat").innerHTML = "Has fallado";
                 x --;
@@ -132,4 +128,6 @@ document.getElementById("letras").innerHTML = "_ _ _ _ _ _ _ _ _ _";
             document.getElementById("ahorcado_0").hidden = true;
             document.getElementById("castillo").hidden = true;
             document.getElementById("gameover").hidden = true;
+            
+            document.getElementById("letras").innerHTML = adivinadas;
         }
