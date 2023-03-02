@@ -30,6 +30,9 @@ html{
             border-radius: 8px;
             margin: auto;
         }
+        .button:active {
+    background-color: #ffbf00;
+}
     /*#boton {
   background-color: #4CAF50;
   border: 2px solid #4CAF50;

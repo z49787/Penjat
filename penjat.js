@@ -4,8 +4,22 @@
             var x = 7;
             var paraula = "";
             var letras = "";
-
+            var parabla1 =["fetge", "forca", "jutges", "mengen", "penjat", "quinta", "setze"];
     
+    var parabla1 = parabla1[Math.floor(Math.random() * parabla1.length)];
+    
+    
+
+    var adivinadas = [];
+        
+            for (var i =0; i < parabla1.length; i++) { 
+                adivinadas[i] = "_";
+                    
+            }
+            alert(parabla1);
+            alert(adivinadas);
+document.getElementById("letras").innerHTML = adivinadas;
+document.getElementById("letras").innerHTML = "_ _ _ _ _ _ _ _ _ _";
 
     function Validar(){
 
@@ -13,59 +27,56 @@
             document.getElementById("lletra").value = '';
             
 
-        lletra = lletra.toLowerCase();
+                        lletra = lletra.toLowerCase();
         switch(lletra) {
-case "á":
-case "à":
-    lletra = "a";
-        break;
-case "í":
+    case "á":
+    case "à":
+        lletra = "a";
+            break;
+    case "í":
 
-case "ï":
+    case "ï":
 
-    lletra ="i";
-        break;
-case "ó":
-case "ò":
-    lletra = "o";
-        break;
-case "è":
-case "é":
-    lletra = "e";
-        break;
-case "ú":
+        lletra ="i";
+            break;
+    case "ó":
+    case "ò":
+        lletra = "o";
+            break;
+    case "è":
+    case "é":
+        lletra = "e";
+            break;
+    case "ú":
 
-case "ü":
+    case "ü":
 
-    lletra = "u";
-        break;
-}
+        lletra = "u";
+            break;
+    }
 
-        alert(lletra);           
-            paraula= paraula + lletra +" "
-            document.getElementById("paraula").innerHTML = paraula;
+        //alert(lletra);           
+        paraula= paraula + lletra +" "
+        document.getElementById("paraula").innerHTML = paraula;
 
-                 if (((lletra <= "m") && (lletra >= "a")) || (lletra == "ç") ||
-                    (lletra == "·"))
-                {
-                    document.getElementById("resultat").innerHTML = "Has acertado";
-                    //alert("si");
-                }
-                 else if (((lletra >= "n") && (lletra <= "z")) || (lletra == "ñ")
-                         || (lletra == "·"))
-                {
-                    document.getElementById("resultat").innerHTML = "Has fallado";
-                    //alert("no");
-                    x = x - 1;
-                    document.getElementById("x").innerHTML = x;
+        var pos = parabla1.indexOf(lletra);
 
-                    //alert(x + ' ' + "vidas");
-                  
-               } else {
-                   alert("Caracter incorrecte");
-               }
+             if (pos < -1)
+            {
+                document.getElementById("resultat").innerHTML = "Has acertado";
+                //alert("si");
+            }
+             else if (pos > -1)
+            {
+                document.getElementById("resultat").innerHTML = "Has fallado";
+                x --;
+                document.getElementById("x").innerHTML = x;
+
+
+           } else {
+               alert("Caracter incorrecte");
+           }
                
-            //if (x <= 7){document.getElementById('bell_toll').play()}
             if (x == 6){document.getElementById("ahorcado_0").hidden = false;
                 document.getElementById('bell_toll').play()
             }
@@ -93,8 +104,8 @@ case "ü":
                           document.getElementById("ahorcado_5").hidden = true;
                 document.getElementById('cat-fight').play()
                 document.body.style.backgroundImage = "url('img/Castle2.png')";
-        document.getElementById("1").disabled = true;
-        document.getElementById("lletra").disabled = true;
+                        document.getElementById("1").disabled = true;
+                        document.getElementById("lletra").disabled = true;
                 
             }
                 
