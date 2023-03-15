@@ -1,11 +1,61 @@
 
+//var globales
+var x = 7;
+var paraula = "";
+var letras = "";
 
+var parabla1 =["fetge", "forca", "jutges", "mengen", "penjat", "quinta", "setze","cordes"];
+var pista =["Setze jutges d,un jutgat mengen fetge d'un penjat","A la quinta forca",
+    "A ca un penjat, no hi anomenis cordes"];
+var palabrapista = [0,1,0,0,0,1,0,3];
 
-            var x = 7;
-            var paraula = "";
-            var letras = "";
-            var parabla1 =["fetge", "forca", "jutges", "mengen", "penjat", "quinta", "setze"];
-    
+var taula =
+    [{"parabla1": "fetge", "pista": "Setze jutges d,un jutgat mengen fetge d'un penjat"},
+    {"parabla1": "forca", "pista":"A la quinta forca"},
+    {"parabla1": "jutges", "pista":"Setze jutges d,un jutgat mengen fetge d'un penjat"},
+    {"parabla1": "mengen", "pista":"Setze jutges d,un jutgat mengen fetge d'un penjat"},
+    {"parabla1": "penjat", "pista":"Setze jutges d,un jutgat mengen fetge d'un penjat"},
+    {"parabla1": "quinta", "pista":"A la quinta forca"},
+    {"parabla1": "setze", "pista":"Setze jutges d,un jutgat mengen fetge d'un penjat"},
+    {"paraula1": "setze", "pista":"A ca un penjat, no hi anomenis cordes"}
+    ]
+
+/*const idiomas [{
+
+"IdIdioma":	"ca",
+"Titol":	"Versió amb Estructures de Dades Joc del Penjat",
+"Versio"	Versió β Joc del Penjat
+"Input"	Escriu una lletra minúscula
+"Pregunta"	Anam a la quinta forca?
+Comprovar	Comprovar
+Paraula	Paraula
+Sopes	Demanes sopes?
+Pista	Pista
+Vides	Vides
+Moix	Un moix en té set?
+Lletres	Lletres
+Ets	Ets de lletres?
+URLpistes	URLpistes
+Dita	Dita
+Dita1	A la quinta forca, 
+Dita2	A ca un penjat, no hi anomenis cordes, 
+Dita3	Setze jutges d'un jutjat mengen fetge d'un penjat, …
+Credits	Crèdits
+YouTube	Joc Penjat on Scratch
+Wikis	Penjat
+Idioma	en Català
+Diccionari	Diccionari
+Teclat	Mostra o Amaga
+Incorrecte	Caràcter incorrecte!
+Repetida	Lletra repetida!
+Encertat	Has encertat!
+Guanyat	i has guanyat!
+Fallat	Has fallat!
+Perdut	i has perdut!
+Descansi	En pau descansi – RIP!
+Puntuacio	Puntuació
+}]*/
+
     var parabla1 = parabla1[Math.floor(Math.random() * parabla1.length)];
     
     
