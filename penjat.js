@@ -7,7 +7,7 @@ var letras = "";
 var parabla1 =["fetge", "forca", "jutges", "mengen", "penjat", "quinta", "setze","cordes"];
 var pista =["Setze jutges d,un jutgat mengen fetge d'un penjat","A la quinta forca",
     "A ca un penjat, no hi anomenis cordes"];
-var palabrapista = [0,1,0,0,0,1,0,3];
+var palabrapista = [0,1,0,0,0,1,0,2];
 
 var taula =
     [{"parabla1": "fetge", "pista": "Setze jutges d,un jutgat mengen fetge d'un penjat"},
@@ -19,6 +19,7 @@ var taula =
     {"parabla1": "setze", "pista":"Setze jutges d,un jutgat mengen fetge d'un penjat"},
     {"paraula1": "setze", "pista":"A ca un penjat, no hi anomenis cordes"}
     ]
+    
 var aleatorio= Math.floor(Math.random() * parabla1.length);
 var paraula = palabra1[aleatorio];
 var pista = pista[palabrapista[aleatorio]];
