@@ -1,10 +1,10 @@
 
 //var globales
 var x = 7;
-var paraula = "";
-var letras = "";
+var paraula = [];
+var letras = ["_" , "_" , "_" , "_" , "_" , "_" , "_"];
 
-var parabla1 =["fetge", "forca", "jutges", "mengen", "penjat", "quinta", "setze","cordes"];
+var palabra1 =["fetge", "forca", "jutges", "mengen", "penjat", "quinta", "setze","cordes"];
 var pista =["Setze jutges d,un jutgat mengen fetge d'un penjat","A la quinta forca",
     "A ca un penjat, no hi anomenis cordes"];
 var palabrapista = [0,1,0,0,0,1,0,2];
@@ -20,8 +20,8 @@ var taula =
     {"paraula1": "setze", "pista":"A ca un penjat, no hi anomenis cordes"}
     ]
     
-var aleatorio= Math.floor(Math.random() * parabla1.length);
-var paraula = palabra1[aleatorio];
+var aleatorio= Math.floor(Math.random() * palabra1.length);
+var Paraula = palabra1[aleatorio];
 var pista = pista[palabrapista[aleatorio]];
 
 var palabra1 = taula[aleatorio].parabla1;
@@ -134,13 +134,13 @@ const idiomas = [{
 }
 ]
 
-    var parabla1 = parabla1[Math.floor(Math.random() * parabla1.length)];
+    var palabra1 = palabra1[Math.floor(Math.random() * palabra1.length)];
     
     
 
     var adivinadas = [];
         
-            for (var i =0; i < parabla1.length; i++) { 
+            for (var i =0; i < palabra1.length; i++) { 
                 adivinadas[i] = "_";      
             }
             
@@ -179,17 +179,25 @@ const idiomas = [{
     }
 
         //alert(lletra);           
-        paraula= paraula + lletra +" "
+        //paraula= paraula + lletra +" "
         document.getElementById("paraula").innerHTML = paraula;
 
-        var pos = parabla1.indexOf(lletra);
+        var pos = Paraula.indexOf(lletra);
 
              if (pos > -1)
             {
                 document.getElementById("resultat").innerHTML = "Has acertado";
                 alert("si");
                 adivinadas[pos] = "";
+                for (var i =0; i < palabra1.length; i++)
+                {
+                    if (Paraula[i] == letras)
+                    {
+                        paraula[i] = letras;
+                    }
+                }
             }
+            //document.getElementById("paraula").innerHTML = paraula;
              else if (pos == -1)
             {
                 document.getElementById("resultat").innerHTML = "Has fallado";
@@ -201,31 +209,31 @@ const idiomas = [{
                alert("Caracter incorrecte");
            }
                
-            if (x == 6){document.getElementById("ahorcado_0").hidden = false;
+            if (x == 6){document.getElementById("ahorcado_6").hidden = false;
                 document.getElementById('bell_toll').play()
             }
-            if (x == 5){document.getElementById("ahorcado_1").hidden = false;
-                           document.getElementById("ahorcado_0").hidden = true;
+            if (x == 5){document.getElementById("ahorcado_5").hidden = false;
+                           document.getElementById("ahorcado_6").hidden = true;
                 document.getElementById('bell_toll').play()
             }
-            if (x == 4){document.getElementById("ahorcado_2").hidden = false;
-                          document.getElementById("ahorcado_1").hidden = true;
+            if (x == 4){document.getElementById("ahorcado_4").hidden = false;
+                          document.getElementById("ahorcado_5").hidden = true;
                 document.getElementById('bell_toll').play()
             }
             if (x == 3){document.getElementById("ahorcado_3").hidden = false;
-                            document.getElementById("ahorcado_2").hidden = true;
+                            document.getElementById("ahorcado_4").hidden = true;
                 document.getElementById('bell_toll_x3').play()
             }
-            if (x == 2){document.getElementById("ahorcado_4").hidden = false;
+            if (x == 2){document.getElementById("ahorcado_2").hidden = false;
                             document.getElementById("ahorcado_3").hidden = true;
                 document.getElementById('bell_toll').play()
             }
-            if (x == 1){document.getElementById("ahorcado_5").hidden = false;
-                            document.getElementById("ahorcado_4").hidden = true;
+            if (x == 1){document.getElementById("ahorcado_1").hidden = false;
+                            document.getElementById("ahorcado_2").hidden = true;
                 document.getElementById('bell_toll').play()
             }
-            if (x == 0){document.getElementById("ahorcado_6").hidden = false;
-                          document.getElementById("ahorcado_5").hidden = true;
+            if (x == 0){document.getElementById("ahorcado_0").hidden = false;
+                          document.getElementById("ahorcado_1").hidden = true;
                 document.getElementById('cat-fight').play()
                 document.body.style.backgroundImage = "url('img/Castle2.png')";
                         document.getElementById("1").disabled = true;
