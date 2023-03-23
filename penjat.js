@@ -2,7 +2,7 @@
 //var globales
 var x = 7;
 var paraula = [];
-var letras = ["_" , "_" , "_" , "_" , "_" , "_" , "_"];
+var letras = ["_" , "_" , "_ , _ , _ , _" , "_" , "_"];
 
 var palabra1 =["fetge", "forca", "jutges", "mengen", "penjat", "quinta", "setze","cordes"];
 var pista =["Setze jutges d,un jutgat mengen fetge d'un penjat","A la quinta forca",
@@ -21,7 +21,7 @@ var taula =
     ]
     
 var aleatorio= Math.floor(Math.random() * palabra1.length);
-var Paraula = palabra1[aleatorio];
+var paraula = palabra1[aleatorio];
 var pista = pista[palabrapista[aleatorio]];
 
 var palabra1 = taula[aleatorio].parabla1;
@@ -134,7 +134,7 @@ const idiomas = [{
 }
 ]
 
-    var palabra1 = palabra1[Math.floor(Math.random() * palabra1.length)];
+    // var palabra1 = palabra1[Math.floor(Math.random() * palabra1.length)];
     
     
 
@@ -180,24 +180,22 @@ const idiomas = [{
 
         //alert(lletra);           
         //paraula= paraula + lletra +" "
-        document.getElementById("paraula").innerHTML = paraula;
 
-        var pos = Paraula.indexOf(lletra);
+        var pos = paraula.indexOf(lletra);
 
              if (pos > -1)
             {
                 document.getElementById("resultat").innerHTML = "Has acertado";
                 alert("si");
-                adivinadas[pos] = "";
-                for (var i =0; i < palabra1.length; i++)
+                // adivinadas[pos] = "";
+                for (var i =0; i < palabra.length; i++)
                 {
-                    if (Paraula[i] == letras)
+                    if (palabra[i] == lletra)
                     {
-                        paraula[i] = letras;
+                        adivinadas[i] = lletra;
                     }
                 }
             }
-            //document.getElementById("paraula").innerHTML = paraula;
              else if (pos == -1)
             {
                 document.getElementById("resultat").innerHTML = "Has fallado";
@@ -208,6 +206,7 @@ const idiomas = [{
            } else {
                alert("Caracter incorrecte");
            }
+        document.getElementById("paraula").innerHTML = adivinadas;
                
             if (x == 6){document.getElementById("ahorcado_6").hidden = false;
                 document.getElementById('bell_toll').play()
