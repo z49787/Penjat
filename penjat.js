@@ -2,7 +2,7 @@
 //var globales
 var x = 7;
 var paraula = [];
-var letras = ["_" , "_" , "_ , _ , _ , _" , "_" , "_"];
+var letras = ["_" , "_" , "_" , "_" , "_" , "_" , "_" , "_"];
 
 var palabra1 =["fetge", "forca", "jutges", "mengen", "penjat", "quinta", "setze","cordes"];
 var pista =["Setze jutges d,un jutgat mengen fetge d'un penjat","A la quinta forca",
@@ -188,17 +188,20 @@ const idiomas = [{
                 document.getElementById("resultat").innerHTML = "Has acertado";
                 alert("si");
                 // adivinadas[pos] = "";
-                for (var i =0; i < palabra.length; i++)
+                for (var i =0; i < paraula.length; i++)
                 {
-                    if (palabra[i] == lletra)
+                    if (paraula[i] == lletra)
                     {
                         adivinadas[i] = lletra;
                     }
                 }
+                alert(adivinadas);
             }
              else if (pos == -1)
             {
                 document.getElementById("resultat").innerHTML = "Has fallado";
+                letras[7 - x] = lletra;
+                document.getElementById("fallo").innerHTML = letras;
                 x --;
                 document.getElementById("x").innerHTML = x;
 
@@ -206,7 +209,7 @@ const idiomas = [{
            } else {
                alert("Caracter incorrecte");
            }
-        document.getElementById("paraula").innerHTML = adivinadas;
+        document.getElementById("letras").innerHTML = adivinadas;
                
             if (x == 6){document.getElementById("ahorcado_6").hidden = false;
                 document.getElementById('bell_toll').play()
