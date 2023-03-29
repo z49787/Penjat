@@ -1,6 +1,7 @@
 
 //var globales
 var x = 7;
+var puntos = 0;
 var paraula = [];
 var letras = ["_" , "_" , "_" , "_" , "_" , "_" , "_" , "_"];
 
@@ -26,6 +27,8 @@ var pista = pista[palabrapista[aleatorio]];
 
 var palabra1 = taula[aleatorio].parabla1;
 var pista= taula[aleatorio].pista;
+//borrar
+alert(paraula)
 
 const idiomas = [{
 
@@ -178,16 +181,12 @@ const idiomas = [{
             break;
     }
 
-        //alert(lletra);           
-        //paraula= paraula + lletra +" "
-
         var pos = paraula.indexOf(lletra);
 
-             if (pos > -1)
-            {
-                document.getElementById("resultat").innerHTML = "Has acertado";
-                alert("si");
-                // adivinadas[pos] = "";
+    if (pos > -1)
+    {
+       document.getElementById("resultat").innerHTML = "Has acertado";
+       // alert("si");
                 for (var i =0; i < paraula.length; i++)
                 {
                     if (paraula[i] == lletra)
@@ -195,21 +194,34 @@ const idiomas = [{
                         adivinadas[i] = lletra;
                     }
                 }
-                alert(adivinadas);
-            }
-             else if (pos == -1)
-            {
-                document.getElementById("resultat").innerHTML = "Has fallado";
-                letras[7 - x] = lletra;
-                document.getElementById("fallo").innerHTML = letras;
-                x --;
-                document.getElementById("x").innerHTML = x;
-
-
-           } else {
-               alert("Caracter incorrecte");
-           }
-        document.getElementById("letras").innerHTML = adivinadas;
+       document.getElementById("letras").innerHTML = adivinadas;
+//alert(adivinadas.indexOf("_"));
+                    if(adivinadas.indexOf("_") >= -1)
+                {
+//alert(x);
+                puntos = paraula.length * x * 10 - document.getElementById("counter").innerHTML;
+//alert(puntos);
+                    if (puntos < 0){puntos = 0;};
+ 
+                document.getElementById("puntos").innerHTML = Idioma.Puntuacio + " " + puntos;
+                
+                }
+    }
+    else if (pos == -1)
+    {
+        document.getElementById("resultat").innerHTML = "Has fallado";
+        letras[7 - x] = lletra;
+        document.getElementById("fallo").innerHTML = letras;
+        x --;
+        document.getElementById("x").innerHTML = x;
+    }
+           
+    else {
+       alert("Caracter incorrecte");
+    }
+            
+        
+            
                
             if (x == 6){document.getElementById("ahorcado_6").hidden = false;
                 document.getElementById('bell_toll').play()
@@ -240,10 +252,8 @@ const idiomas = [{
                 document.body.style.backgroundImage = "url('img/Castle2.png')";
                         document.getElementById("1").disabled = true;
                         document.getElementById("lletra").disabled = true;
-                
             }
-                
-    }
+                        }
     
     /*function audio(){ 
         switch (x){
