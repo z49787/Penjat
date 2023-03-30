@@ -30,6 +30,8 @@ var pista= taula[aleatorio].pista;
 //borrar
 alert(paraula)
 
+function Pista(){alert(pista)}
+
 const idiomas = [{
 
 "IdIdioma":	"ca",
@@ -196,7 +198,7 @@ const idiomas = [{
                 }
                 document.getElementById("letras").innerHTML = adivinadas;
 
-        if(adivinadas.indexOf("_") >= -1)
+        if(adivinadas.indexOf("_") == -1)
     {
         document.body.style.backgroundImage = "url('img/Party.png')";
     

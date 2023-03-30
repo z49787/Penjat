@@ -24,8 +24,10 @@ html{
             position:relative; top:-330px; left: 120px;
         }
         #score{
-          position:relative; top:-280px; left: 280px;
-
+            position:relative; top:-280px; left: 280px;
+            text-shadow: 2px 2px green;
+            font-size: 40px;
+            font-family: "Lucida Console", "Courier New", monospace;
         }
         #counter {
             background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
