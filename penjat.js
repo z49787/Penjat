@@ -194,18 +194,30 @@ const idiomas = [{
                         adivinadas[i] = lletra;
                     }
                 }
-       document.getElementById("letras").innerHTML = adivinadas;
-//alert(adivinadas.indexOf("_"));
-                    if(adivinadas.indexOf("_") >= -1)
-                {
-//alert(x);
-                puntos = paraula.length * x * 10 - document.getElementById("counter").innerHTML;
-//alert(puntos);
-                    if (puntos < 0){puntos = 0;};
- 
-                document.getElementById("puntos").innerHTML = Idioma.Puntuacio + " " + puntos;
+                document.getElementById("letras").innerHTML = adivinadas;
+
+        if(adivinadas.indexOf("_") >= -1)
+    {
+        document.body.style.backgroundImage = "url('img/Party.png')";
+    
+            puntos = paraula.length * x * 10 - document.getElementById("counter").innerHTML;
+
+            if (puntos < 0){puntos = 0;};
+
+            document.getElementById("score").innerHTML = "puntos: " + puntos;
+        
+        document.getElementById("ahorcado_6").hidden = true;
+        document.getElementById("ahorcado_5").hidden = true;
+        document.getElementById("ahorcado_4").hidden = true;
+        document.getElementById("ahorcado_3").hidden = true;
+        document.getElementById("ahorcado_2").hidden = true;
+        document.getElementById("ahorcado_1").hidden = true;
+        document.getElementById("ahorcado_0").hidden = true;
+        document.getElementById("ahorcado").hidden = true;
+            
+    }
                 
-                }
+                
     }
     else if (pos == -1)
     {

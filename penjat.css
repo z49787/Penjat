@@ -23,6 +23,10 @@ html{
         #fotos {
             position:relative; top:-330px; left: 120px;
         }
+        #score{
+          position:relative; top:-280px; left: 280px;
+
+        }
         #counter {
             background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
             border: 1px solid black;
