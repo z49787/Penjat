@@ -1,5 +1,6 @@
 
 //var globales
+var Idioma = ""
 var x = 7;
 var puntos = 0;
 var paraula = [];
@@ -32,7 +33,7 @@ alert(paraula)
 
 function Pista(){alert(pista)}
 
-const idiomas = [{
+const Idiomes = [{
 
 "IdIdioma":	"ca",
 "Titol":	"Versió amb Estructures de Dades Joc del Penjat",
@@ -104,26 +105,26 @@ const idiomas = [{
 },
 {
 "IdIdioma":	"en",
-"Titol":         "Hangman Game Images and Sounds Version",
+"Titol":        "Hangman Game Images and Sounds Version",
 "Versio":	"Hangman Game β Versión",
-"Input":         "Write a lowercase letter",
+"Input":        "Write a lowercase letter",
 "Pregunta":	"Are we going to the boondocks?",
 "Comprovar":	"Check it",
 "Paraula":	"Word",
-"Sopes" :        "You give up?",
-"Pista":         "Clue",
-"Vides":         "Lives",
-"Moix" :         "A cat has seven?",
+"Sopes" :       "You give up?",
+"Pista":        "Clue",
+"Vides":        "Lives",
+"Moix" :        "A cat has seven?",
 "Lletres":	"Letters",
-"Ets" :          "Are you in liberal arts?",
+"Ets" :         "Are you in liberal arts?",
 "URLpistes":	"URLclues",
-"Dita":          "Saying",
-"Dita1" :        "To the boondocks,",
-"Dita2" :        "In a hanged man's home, don't talk about ropes,",
-"Dita3" :        "Sixteen judges of a court eat the liver of a hangman, …",
+"Dita":         "Saying",
+"Dita1" :       "To the boondocks,",
+"Dita2" :       "In a hanged man's home, don't talk about ropes,",
+"Dita3" :       "Sixteen judges of a court eat the liver of a hangman, …",
 "Credits":	"Credits",
 "YouTube":	"Hangman Game on Scratch",
-"Wikis":         "Hangman",
+"Wikis":        "Hangman",
 "Idioma":	"in English",
 "Diccionari":	"Dictionary",
 "Teclat":	"Show or Hide",
@@ -138,8 +139,46 @@ const idiomas = [{
 
 }
 ]
+function canviaridioma (IdIdioma) {
+    Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
+    document.title = Idioma.Titol;
+    document.getElementById("Versio").innerHTML = Idioma.Versio;
+    document.getElementById("Input").innerHTML = Idioma.Input;
+    document.getElementById("Pregunta").innerHTML = Idioma.Pregunta;
+    document.getElementById("Comprovar").innerHTML = Idioma.Comprovar;
+    document.getElementById("Paraula").innerHTML = Idioma.Paraula;
+    document.getElementById("Sopes").innerHTML = Idioma.Sopes;
+    document.getElementById("Pista").innerHTML = Idioma.Pista;
+    document.getElementById("Vides").innerHTML = Idioma.Vides;
+    document.getElementById("Moix").innerHTML = Idioma.Moix;
+        document.getElementById("Lletres").placeholder = Idioma.Lletres;
+    document.getElementById("Ets").innerHTML = Idioma.Ets;
+    document.getElementById("URLpistes").innerHTML = Idioma.URLpistes;
+    document.getElementById("Dita").innerHTML = Idioma.Dita;
+    document.getElementById("Dita1").innerHTML = Idioma.Dita1;
+       document.getElementById("Dita_1").title = Idioma.Dita_1;
+    document.getElementById("Dita2").innerHTML = Idioma.Dita2;
+        document.getElementById("Dita_2").title = Idioma.Dita_2;
+    document.getElementById("Dita3").innerHTML = Idioma.Dita3;
+        document.getElementById("Dita_3").title = Idioma.Dita_3;
+    document.getElementById("Credits").innerHTML = Idioma.Credits;
+    document.getElementById("YouTube").innerHTML = Idioma.YouTube;
+    document.getElementById("Wikis").innerHTML = Idioma.Wikis;
+    document.getElementById("Idioma").innerHTML = Idioma.Idioma;
+    document.getElementById("Diccionari").innerHTML = Idioma.Diccionari;
+        document.getElementById("Teclat").title = Idioma.Incorrecte;
+    document.getElementById("Repetida").innerHTML = Idioma.Repetida;
+    document.getElementById("Encertat").innerHTML = Idioma.Encertat;
+    document.getElementById("Guanyat").innerHTML = Idioma.Guanyat;
+    document.getElementById("Fallat").innerHTML = Idioma.Fallat;
+    document.getElementById("Perdut").innerHTML = Idioma.Perdut;
+    document.getElementById("Descansi").innerHTML = Idioma.Descansi;
+    document.getElementById("Puntuacio").innerHTML = Idioma.Puntuacio;
+    if (puntos > 0) {
+        document.getElementById("puntos").innerHTML = Idioma.Puntuacio + " " + puntos;
+    }
+}
 
-    // var palabra1 = palabra1[Math.floor(Math.random() * palabra1.length)];
     
     
 
@@ -268,17 +307,6 @@ const idiomas = [{
                         document.getElementById("lletra").disabled = true;
             }
                         }
-    
-    /*function audio(){ 
-        switch (x){
-                case 6,4,5:
-                    document.getElementById('bell_toll').play()
-                break;
-                case 3,2,1:
-                    document.getElementById('bell_toll_x3').play()
-                break;
-      }
-    }*/
             
         function cargar(){      
             document.getElementById("ahorcado_1").hidden = true;
