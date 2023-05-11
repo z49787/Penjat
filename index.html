@@ -9,9 +9,14 @@ and open the template in the editor.
         <title>Joc del Penjat</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <script src="penjat.js"></script>
-        <link href="penjat.css" rel="stylesheet" type="text/css"/>
+        
+        <script src="js/Teclado.js"></script>
+        <script src="js/penjat.js"></script>
+        <script src="js/alasgl.js"></script>
+        <script src="js/sql-wasm.js"></script>
+        <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+             
+        <link href="css/penjat.css" rel="stylesheet" type="text/css"/>
 
     </head>
     <body onload="cargar(); document.getElementById('mystery').play();"
@@ -48,7 +53,8 @@ and open the template in the editor.
         </div>
        
        <div>
-        <button onclick="canviaridioma()" >canviaridioma</button>
+        <button onclick="canviaridioma()" >Canviar idioma</button>
+        <button onclick="prueba()" >Prueba</button>
         </div>
 
             <h2>LLetres</h2> 
@@ -121,6 +127,14 @@ and open the template in the editor.
                 <img src="img/ca.png" alt="tra_es" title="en Catalán"/>  
                     </a>
         </div>
+            
+            <input type="text" id="texto">
+ 
+        <div id="teclado">
+            <div id="letras2"></div>
+        </div>
+        <div id="disposicionTeclado"><span class="selected">Querty</span> <=> <span>Abecedario</span></div>
+            
                 
                     
     <a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El Joc del Penjat</a>
