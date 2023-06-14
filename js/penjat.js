@@ -320,9 +320,27 @@ function canviaridioma (IdIdioma) {
             document.getElementById("letras").innerHTML = adivinadas;
         }
 
-           
+  function canviaridioma(){
+        alert("canviaridioma");
+        }  
+        
+// Print data  
+function Print_Data(res) {
+    for (var i in res)
+    {
+        // console.log("row " + i);
+        // document.getElementById("res").innerHTML += "<br>";
+        for (var j in res[i])
+        {
+            // console.log(" " + res[i][j]);
+            // document.getElementById("res").innerHTML += res[i][j] + ", ";
+            window.alert("res[" + i + "][" + j + "] = " + res[i][j]);
+        }
+    }
+}
+    
  function prueba(){
-        alert("prueba")
+        alert("prueba");
         config = {
             locateFile: file => `https://sql.js.org/dist/${file}`
             // locateFile: filename => `https://unpkg.com/sql.js@1.6.2/dist/${filename}`
@@ -330,16 +348,16 @@ function canviaridioma (IdIdioma) {
         // The `initSqlJs` function is globally provided by all of the main dist files if loaded in the browser.
         // We must specify this locateFile function if we are loading a wasm file from anywhere other than the
         // current html page's folder.
-         alasql('ATTACH SQLITE DATABASE penjat("BDD/penjat.db"); USE penjat; \n\
+        alasql('ATTACH SQLITE DATABASE penjat("BDD/penjat2.db"); USE penjat; \n\
                 SELECT * FROM TblTextosGUI;',
-        //     [], function(idiomes) {Print_Data(idiomes = idiomes.pop());}
-            [], function(idiomes) {Idioma = idiomes.pop();}
+             [], function(idiomes) {Print_Data(idiomes = idiomes.pop());}
+        //    [], function(idiomes) {Idioma = idiomes.pop();}
         );
-        window.alert(Idioma[0].Versio);
-        if (Idioma.length == 0) {Idioma = Idiomes_dfl;};
+        //window.alert(Idioma[0].Versio);
+        //if (Idioma.length == 0) {Idioma = Idiomes_dfl;};
         }
         /*alasql('ATTACH SQLITE DATABASE penjat("BDD/penjat.db"); USE penjat; \n\
-                SELECT * FROM TblTextosGUI;',
+                SELECT * FROM TblParaules;',
         //     [], function(idiomes) {Print_Data(idiomes = idiomes.pop());}
                 [], function (idiomes) {
             Idioma = idiomes.pop();
